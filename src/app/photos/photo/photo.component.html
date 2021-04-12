@@ -1,2 +1,17 @@
-<h1>{{ title }}</h1>
-<img class="img-thumbnail" [src]="url" [alt]="description" width="200rem" />
+<div class="row">
+  <div class="card flex-row flex-wrap">
+    <div class="card-header border-0">
+      <img [src]="url" alt="" width="200rem" />
+    </div>
+    <div class="card-block px-2">
+      <h4 class="card-title mt-4">{{ title }}</h4>
+      <p class="card-text">{{ description }}</p>
+      <a href="#" class="btn btn-primary mb-4">Assistir</a>
+      <h6 class="text-muted">
+        Gênero: {{ genero }} <br />Diretor: {{ diretor }} <br />Ano: {{ ano }}
+      </h6>
+    </div>
+    <div class="w-100"></div>
+    <div class="card-footer w-100 text-muted"></div>
+  </div>
+</div>

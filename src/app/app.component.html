@@ -1,6 +1,27 @@
-<ap-photo
-  *ngFor="let photo of photos"
-  [url]="photo.poster"
-  [description]="photo.descricao"
-  [title]="photo.nome"
-></ap-photo>
+<app-cabecalho></app-cabecalho>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">
+            Categoria - Sci-fi
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let photo of photos" class="col-sm-12 mb-4">
+      <ap-photo
+        [url]="photo.poster"
+        [description]="photo.descricao"
+        [title]="photo.nome"
+        [ano]="photo.ano"
+        [diretor]="photo.diretor"
+        [genero]="photo.genero"
+      ></ap-photo>
+    </div>
+  </div>
+</div>
+<app-rodape></app-rodape>

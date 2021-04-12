@@ -11,7 +11,6 @@ export class AppComponent {
 
   constructor(http: HttpClient) {
     http.get<object[]>('./assets/filmes.json').subscribe((photos) => {
-      console.log(photos);
       this.photos = photos;
     });
   }
